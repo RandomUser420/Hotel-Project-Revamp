@@ -21,18 +21,19 @@ var list = 0;
 
    }
  }
-
+ 
  function removeMe() {
-
-
-   document.getElementById("full").innerHTML = "";
-  var number = document.getElementById("first");  //This gets the OL id
-  var user = document.getElementById("usernumber").value;  //Get the number of the person to be deleted
-  var y = parseInt(user); //Parse Int
-  number.removeChild(number.childNodes[y]);//Remove the child
-  list--;
-
-   document.getElementById("full").innerHTML = "";
+  document.getElementById("first").addEventListener("click",function(e) {
+    document.getElementById("full").innerHTML = "";
+  var item = e.target; //Get the LI that has been created which was the one clicked on (target)
+  if (item.tagName.toUpperCase() == "LI") { //See if it is an LI
+    item.parentNode.removeChild(item); //Remove LI
+    list--;
+    document.getElementById("full").innerHTML = "";
+  }
+  
+});
+  
  }
 
 
@@ -62,15 +63,18 @@ var list = 0;
  }
 
 function removeMe2() {
-  var list = document.getElementById("second");  //This gets the OL id
-  var int = document.getElementById("Userinput").value;  //Get the number of the person to be deleted
-  var d = parseInt(int); //Parse Int
-  list.removeChild(list.childNodes[d]);//Remove the child
-  list--;
-
-   document.getElementById("fill").innerHTML = "";
-}
-
+      
+  document.getElementById("second").addEventListener("click",function(e) {
+    document.getElementById("fill").innerHTML = "";
+  var item = e.target; //Get the LI that has been created which was the one clicked on (target)
+  if (item.tagName.toUpperCase() == "LI") { //See if it is an LI
+    item.parentNode.removeChild(item); //Remove LI
+    lists--;
+    document.getElementByID("fill").innerHTML="";  }
+  
+});
+  
+ }
 
  var List = 0;
  function addMe3() {
@@ -99,15 +103,18 @@ function removeMe2() {
  }
 
 function removeMe3() {
-  var list2 = document.getElementById("third");  //This gets the OL id
-  var int2 = document.getElementById("Userinput2").value;  //Get the number of the person to be deleted
-  var k = parseInt(int2); //Parse Int
-  list2.removeChild(list2.childNodes[k]);//Remove the child
-  List--;
-
-   document.getElementById("closed").innerHTML = "";
-}
-
+      
+  document.getElementById("third").addEventListener("click",function(e) {
+    document.getElementById("closed").innerHTML = "";
+  var item = e.target; //Get the LI that has been created which was the one clicked on (target)
+  if (item.tagName.toUpperCase() == "LI") { //See if it is an LI
+    item.parentNode.removeChild(item); //Remove LI
+    List--;
+    document.getElementByID("closed").innerHTML="";  }
+  
+});
+  
+ }
 
 
  var List2 = 0;
@@ -136,14 +143,18 @@ function removeMe3() {
  }
 
 function removeMe4() {
-  var list3 = document.getElementById("fourth");  //This gets the OL id
-  var int3 = document.getElementById("Userinput3").value;  //Get the number of the person to be deleted
-  var z = parseInt(int3); //Parse Int
-  list3.removeChild(list3.childNodes[z]);//Remove the child
-  List2--;
-
-   document.getElementById("No").innerHTML = "";
-}
+      
+  document.getElementById("fourth").addEventListener("click",function(e) {
+    document.getElementById("No").innerHTML = "";
+  var item = e.target; //Get the LI that has been created which was the one clicked on (target)
+  if (item.tagName.toUpperCase() == "LI") { //See if it is an LI
+    item.parentNode.removeChild(item); //Remove LI
+    List2--;
+    document.getElementByID("No").innerHTML="";  }
+  
+});
+  
+ }
 
 
  var List3 = 0;
@@ -173,15 +184,18 @@ function removeMe4() {
  }
 
 function removeMe5() {
-  var list4 = document.getElementById("fifth");  //This gets the OL id
-  var int4 = document.getElementById("Userinput4").value;  //Get the number of the person to be deleted
-  var h = parseInt(int4); //Parse Int
-  list4.removeChild(list4.childNodes[h]);//Remove the child
-  List3--;
-
-   document.getElementById("Nien").innerHTML = ""
-}
-
+      
+  document.getElementById("fifth").addEventListener("click",function(e) {
+    document.getElementById("Nien").innerHTML = "";
+  var item = e.target; //Get the LI that has been created which was the one clicked on (target)
+  if (item.tagName.toUpperCase() == "LI") { //See if it is an LI
+    item.parentNode.removeChild(item); //Remove LI
+    List3--;
+    document.getElementByID("Nien").innerHTML="";  }
+  
+});
+  
+ }
  var List4 = 0;
  function addMe6() {
   
@@ -208,15 +222,18 @@ function removeMe5() {
  }
 
 function removeMe6() {
-  var list5 = document.getElementById("six");  //This gets the OL id
-  var int5 = document.getElementById("Userinput5").value;  //Get the number of the person to be deleted
-  var i = parseInt(int5); //Parse Int
-  list5.removeChild(list5.childNodes[i]);//Remove the child
-  List4--;
-
-   document.getElementById("Clear").innerHTML = ""
-}
-
+      
+  document.getElementById("six").addEventListener("click",function(e) {
+    document.getElementById("Clear").innerHTML = "";
+  var item = e.target; //Get the LI that has been created which was the one clicked on (target)
+  if (item.tagName.toUpperCase() == "LI") { //See if it is an LI
+    item.parentNode.removeChild(item); //Remove LI
+    lists--;
+    document.getElementByID("Clear").innerHTML="";  }
+  
+});
+  
+ }
 function removeAll(){
         var remove = document.getElementById("second");
         var first = remove.firstElementChild;
@@ -306,3 +323,6 @@ function removeAll(){
           document.getElementById("clean5").style.visibility="visible";
           
           document.getElementById("clean6").style.visibility="visible";
+          
+  
+}
